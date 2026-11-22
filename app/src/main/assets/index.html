@@ -15,7 +15,7 @@ textarea{width:100%;min-height:250px;resize:vertical;background:#09091b;border:1
 input{width:100%;background:#09091b;border:1px solid var(--line);border-radius:10px;padding:12px;color:white}.hidden{display:none}.hint{font-size:12px;line-height:1.5;color:var(--muted)}
 </style></head>
 <body>
-<header><div class="logo">N</div><div><div class="tag">NEON DEVELOPMENT ENVIRONMENT</div><h1>NEXUS NEON</h1><small>Version 0.8 • Android</small></div></header>
+<header><div class="logo">N</div><div><div class="tag">NEON DEVELOPMENT ENVIRONMENT</div><h1>NEXUS NEON</h1><small>Version 0.9 • Android</small></div></header>
 <nav><button class="active" data-tab="editor">Editor</button><button data-tab="library">Library</button><button data-tab="about">About</button></nav>
 <section id="editor" class="panel">
 <div class="row"><b>Luau / Lua editor</b><span class="status">● LOCAL MODE</span></div>
@@ -29,7 +29,7 @@ print(coins)</textarea>
 <div class="panel"><b>Output</b><pre id="output">Ready. Press “Test script”.</pre></div>
 </section>
 <section id="library" class="panel hidden"><b>Saved scripts</b><p class="hint">Your saved examples stay on this device.</p><div id="saved"></div></section>
-<section id="about" class="panel hidden"><b>About NEXUS NEON</b><p>A lightweight offline editor and learning sandbox.</p><p class="hint">No injector, no exploit functions, no Roblox integration. Scripts are interpreted only by the limited local test runner included in this app.</p></section>
+<section id="about" class="panel hidden"><b>About NEXUS NEON</b><p>A lightweight offline editor, learning sandbox, and floating shortcut bubble.</p><p class="hint">The floating N button can stay above other apps after you grant Android overlay permission. It opens this app's shortcut menu only. No injector, no exploit functions, no Roblox integration. Scripts are interpreted only by the limited local test runner included in this app.</p></section>
 <script>
 const $=id=>document.getElementById(id), key='nexus-neon-scripts-v08';
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');['editor','library','about'].forEach(t=>$(t).classList.toggle('hidden',t!==b.dataset.tab));if(b.dataset.tab==='library')renderSaved()});
