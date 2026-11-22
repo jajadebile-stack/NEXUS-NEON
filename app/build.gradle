@@ -1,0 +1,14 @@
+plugins {
+    id 'com.android.application'
+}
+android {
+    namespace 'com.nexus.neon'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.nexus.neon'
+        minSdk 23
+        targetSdk 35
+        versionCode 8
+        versionName '0.8'
+    }
+}
